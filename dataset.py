@@ -54,8 +54,8 @@ def get_dataloaders(train_dir: str, valid_dir: str, test_dir: str, batch_size: i
     valid_dataset = PlanetsDataset(data_dir=valid_dir, transform=transform)
     test_dataset = PlanetsDataset(data_dir=test_dir, transform=transform)
 
-    train_loader = DataLoader(train_dataset, batch_size=batch_size)
-    valid_loader = DataLoader(valid_dataset, batch_size=batch_size)
-    test_loader = DataLoader(test_dataset, batch_size=batch_size)
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    valid_loader = DataLoader(valid_dataset, batch_size=batch_size, shuffle=False)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
     return train_loader, valid_loader, test_loader
