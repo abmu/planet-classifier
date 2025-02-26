@@ -5,7 +5,7 @@ import glob
 # Process multiple images in a folder
 for img_path in glob.glob("images/*.jpg"):
     img = cv2.imread(img_path)
-    height, width, _ = img.shape  # Get image dimensions
+    height, width, _ = img.shape # Get image dimensions
 
     # Convert to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
