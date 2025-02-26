@@ -34,7 +34,7 @@ class PlanetsDataset(Dataset):
         return self.data.classes
 
 
-def get_dataloaders(train_dir: str, valid_dir: str, test_dir: str, batch_size: int=32):
+def get_dataloaders(train_dir: str, valid_dir: str, test_dir: str, batch_size: int=32) -> tuple[DataLoader, DataLoader, DataLoader]:
     '''
     Args:
         train_dir: path to the train folder
